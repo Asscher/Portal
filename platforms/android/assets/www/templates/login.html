@@ -1,0 +1,16 @@
+<div class="container-fluid" >
+    <style>input.ng-invalid.ng-dirty {
+        background-color: pink
+    }</style>
+    <form id="loginform" name="loginForm" class="text-center">
+        <input ng-model="name" type="text" placeholder="Username" required/><br>
+        <input ng-model="password" type="password" placeholder="Password" required/><br>
+        <button type="submit" ng-disabled="loginForm.$invalid" ng-click="login(name,password,loginForm)"
+                ng-class="{true: '', false: 'btn-primary'}[loginForm.$invalid]" class="btn ">Login
+        </button>
+        <!-- <p>token : {{token}}</p>
+        <p>encrypt : {{encrypted}}</p>
+        <p>encrypt : {{url}}</p>-->
+    </form>
+
+</div>
